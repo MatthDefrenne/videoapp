@@ -1,12 +1,26 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Videos
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+      <video  id="videoApp" [ngClass]="{'invisible': isLoading, 'show': !isLoading}" @slideInOut width="100%" [autoplay]="true" muted="1"></video>
 </ion-content>
+<ion-footer no-shadow>
+	<ion-toolbar position="bottom">
+      <ion-grid>
+          <ion-row>
+            <ion-col>
+                <ion-button  (click)="previousVideo()"  expand="full"><ion-icon name="arrow-dropleft"></ion-icon>Previous video</ion-button>
+              </ion-col>
+            <ion-col>
+                <ion-button (click)="nextVideo()"  expand="full">Next video <ion-icon name="arrow-dropright"></ion-icon>
+                </ion-button>
+              </ion-col>
+          </ion-row>
+      </ion-grid>
+	</ion-toolbar>
+</ion-footer>

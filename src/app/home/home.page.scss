@@ -1,1 +1,16 @@
 
+.loader {
+    position: absolute;
+    background: rgb(0, 0, 0);
+    height: 200px;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+}
+.invisible {
+    visibility: hidden;
+  }
+
+  .show {
+    visibility: visible;
+  }
